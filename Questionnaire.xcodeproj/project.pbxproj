@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D76FF06D28AA8405004DBE81 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76FF06C28AA8405004DBE81 /* ParserTests.swift */; };
+		D76FF06F28AA8574004DBE81 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76FF06E28AA8574004DBE81 /* CalculatorTests.swift */; };
 		D777799528AA3D2D000424CE /* QuestionnaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777799428AA3D2D000424CE /* QuestionnaireApp.swift */; };
 		D777799728AA3D2D000424CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777799628AA3D2D000424CE /* ContentView.swift */; };
 		D777799928AA3D30000424CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D777799828AA3D30000424CE /* Assets.xcassets */; };
@@ -14,6 +16,16 @@
 		D77779A628AA3D30000424CE /* QuestionnaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779A528AA3D30000424CE /* QuestionnaireTests.swift */; };
 		D77779B028AA3D30000424CE /* QuestionnaireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779AF28AA3D30000424CE /* QuestionnaireUITests.swift */; };
 		D77779B228AA3D30000424CE /* QuestionnaireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779B128AA3D30000424CE /* QuestionnaireUITestsLaunchTests.swift */; };
+		D77779BF28AA3E3E000424CE /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779BE28AA3E3E000424CE /* FileReader.swift */; };
+		D77779C128AA3E58000424CE /* DocumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C028AA3E58000424CE /* DocumentParser.swift */; };
+		D77779C328AA3F09000424CE /* Questionnaire.txt in Resources */ = {isa = PBXBuildFile; fileRef = D77779C228AA3F09000424CE /* Questionnaire.txt */; };
+		D77779C528AA3FCF000424CE /* QuestionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C428AA3FCF000424CE /* QuestionEntry.swift */; };
+		D77779C728AA40D7000424CE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C628AA40D7000424CE /* ViewModel.swift */; };
+		D77779C928AA414A000424CE /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C828AA414A000424CE /* Report.swift */; };
+		D77779CB28AA46C1000424CE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779CA28AA46C1000424CE /* Calculator.swift */; };
+		D77779CF28AA4E66000424CE /* ReaderTestFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = D77779CE28AA4E66000424CE /* ReaderTestFile.txt */; };
+		D77779D228AA650D000424CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779D128AA650D000424CE /* ViewController.swift */; };
+		D77779D428AA6696000424CE /* ResultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779D328AA6696000424CE /* ResultText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D76FF06C28AA8405004DBE81 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		D76FF06E28AA8574004DBE81 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		D777799128AA3D2D000424CE /* Questionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questionnaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D777799428AA3D2D000424CE /* QuestionnaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireApp.swift; sourceTree = "<group>"; };
 		D777799628AA3D2D000424CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +58,16 @@
 		D77779AB28AA3D30000424CE /* QuestionnaireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionnaireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77779AF28AA3D30000424CE /* QuestionnaireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireUITests.swift; sourceTree = "<group>"; };
 		D77779B128AA3D30000424CE /* QuestionnaireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D77779BE28AA3E3E000424CE /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		D77779C028AA3E58000424CE /* DocumentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentParser.swift; sourceTree = "<group>"; };
+		D77779C228AA3F09000424CE /* Questionnaire.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Questionnaire.txt; sourceTree = "<group>"; };
+		D77779C428AA3FCF000424CE /* QuestionEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntry.swift; sourceTree = "<group>"; };
+		D77779C628AA40D7000424CE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D77779C828AA414A000424CE /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		D77779CA28AA46C1000424CE /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		D77779CE28AA4E66000424CE /* ReaderTestFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReaderTestFile.txt; sourceTree = "<group>"; };
+		D77779D128AA650D000424CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D77779D328AA6696000424CE /* ResultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,14 @@
 		D777799328AA3D2D000424CE /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
+				D77779CD28AA4CD0000424CE /* Facade */,
+				D77779CC28AA4C76000424CE /* Data */,
+				D77779C428AA3FCF000424CE /* QuestionEntry.swift */,
+				D77779C828AA414A000424CE /* Report.swift */,
+				D77779D328AA6696000424CE /* ResultText.swift */,
+				D77779C628AA40D7000424CE /* ViewModel.swift */,
+				D77779D128AA650D000424CE /* ViewController.swift */,
+				D77779CA28AA46C1000424CE /* Calculator.swift */,
 				D777799428AA3D2D000424CE /* QuestionnaireApp.swift */,
 				D777799628AA3D2D000424CE /* ContentView.swift */,
 				D777799828AA3D30000424CE /* Assets.xcassets */,
@@ -113,7 +145,10 @@
 		D77779A428AA3D30000424CE /* QuestionnaireTests */ = {
 			isa = PBXGroup;
 			children = (
+				D77779D028AA4E8A000424CE /* TestData */,
 				D77779A528AA3D30000424CE /* QuestionnaireTests.swift */,
+				D76FF06C28AA8405004DBE81 /* ParserTests.swift */,
+				D76FF06E28AA8574004DBE81 /* CalculatorTests.swift */,
 			);
 			path = QuestionnaireTests;
 			sourceTree = "<group>";
@@ -125,6 +160,31 @@
 				D77779B128AA3D30000424CE /* QuestionnaireUITestsLaunchTests.swift */,
 			);
 			path = QuestionnaireUITests;
+			sourceTree = "<group>";
+		};
+		D77779CC28AA4C76000424CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D77779C228AA3F09000424CE /* Questionnaire.txt */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D77779CD28AA4CD0000424CE /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				D77779BE28AA3E3E000424CE /* FileReader.swift */,
+				D77779C028AA3E58000424CE /* DocumentParser.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		D77779D028AA4E8A000424CE /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				D77779CE28AA4E66000424CE /* ReaderTestFile.txt */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +293,7 @@
 			files = (
 				D777799C28AA3D30000424CE /* Preview Assets.xcassets in Resources */,
 				D777799928AA3D30000424CE /* Assets.xcassets in Resources */,
+				D77779C328AA3F09000424CE /* Questionnaire.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77779CF28AA4E66000424CE /* ReaderTestFile.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77779C528AA3FCF000424CE /* QuestionEntry.swift in Sources */,
+				D77779D428AA6696000424CE /* ResultText.swift in Sources */,
+				D77779BF28AA3E3E000424CE /* FileReader.swift in Sources */,
+				D77779C928AA414A000424CE /* Report.swift in Sources */,
+				D77779D228AA650D000424CE /* ViewController.swift in Sources */,
 				D777799728AA3D2D000424CE /* ContentView.swift in Sources */,
 				D777799528AA3D2D000424CE /* QuestionnaireApp.swift in Sources */,
+				D77779CB28AA46C1000424CE /* Calculator.swift in Sources */,
+				D77779C728AA40D7000424CE /* ViewModel.swift in Sources */,
+				D77779C128AA3E58000424CE /* DocumentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76FF06D28AA8405004DBE81 /* ParserTests.swift in Sources */,
+				D76FF06F28AA8574004DBE81 /* CalculatorTests.swift in Sources */,
 				D77779A628AA3D30000424CE /* QuestionnaireTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
