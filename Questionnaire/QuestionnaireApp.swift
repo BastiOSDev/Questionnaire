@@ -11,7 +11,11 @@ import SwiftUI
 struct QuestionnaireApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let fileReader = FileReader()
+            let url = Bundle.main.url(forResource: "Questionnaire", withExtension: "txt")!
+            let file = DocumentParser().getQuestionEntries(fileReader.readQuestionFile(file: url))
+            
+            ContentView(content: file)
         }
     }
 }

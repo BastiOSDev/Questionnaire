@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    let content: [QuestionEntry]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 30) {
+            ForEach(content, id: \.self) { entry in
+                VStack {
+                    Text(entry.question)
+                    ForEach(entry.answers, id: \.self) { answer in
+                        Text(answer)
+                    }
+                }
+            }
+        }
+        
     }
 }
 
