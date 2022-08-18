@@ -31,7 +31,7 @@ class QuestionnaireTests: XCTestCase {
         let parserTests = ParserTests()
         
         try parserTests.testParserQuestionEntry()
-        try parserTests.testParserGetQuestion()
+        try parserTests.testParserGetQuestionEntries()
     }
     
     func testCalculator() throws {
@@ -39,6 +39,9 @@ class QuestionnaireTests: XCTestCase {
         
         try calculatorTests.testCalculateScore()
         try calculatorTests.testReport()
+        try calculatorTests.testCalculateResult()
+        try calculatorTests.testIsCorrectAnswer()
+        try calculatorTests.testIsWrongAnswer()
     }
     
     // TO DO: UITest for testSelection (ViewController)
