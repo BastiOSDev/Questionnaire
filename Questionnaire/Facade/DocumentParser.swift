@@ -9,18 +9,17 @@ import Foundation
 
 class DocumentParser {
     func getQuestionEntries(_ documentStrings: [String]) -> [QuestionEntry] {
-        var isFirstQuestion = true
-        var questionBlock = [String]()
+        let firstQuestion = documentStrings[0]
+        var questionBlock = [firstQuestion]
         var questionEntries = [QuestionEntry]()
         
-        for line in documentStrings {
-            if isFirstQuestion {
-                isFirstQuestion = false
-                questionBlock.append(line)
-            } else if !isQuestion(line) {
+        let stringsWithoutFirst = removeFirst(documentStrings)
+        
+        for (index, line) in stringsWithoutFirst.enumerated() {
+            if !isQuestion(line) {
                 questionBlock.append(line)
                 
-                if isLastElement(line, array: documentStrings) {
+                if isLastElement(index, array: stringsWithoutFirst) {
                     questionEntries.append(getQuestionEntry(questionBlock))
                 }
             } else {
@@ -33,22 +32,18 @@ class DocumentParser {
     }
     
     func getQuestionEntry(_ questionBlock: [String]) -> QuestionEntry {
-        var question = ""
-        var answer = [String]()
+        let question = formatLine(questionBlock[0], append: "?")
+        var answerBlock = removeFirst(questionBlock)
         var correctAnswer = 0
         
-        for (index, line) in questionBlock.enumerated() {
-            if isQuestion(line) {
-                question = formatLine(line, append: "?")
-            } else if isCorrectAnswer(line) {
-                correctAnswer = index - 1
-                answer.append(formatLine(line))
-            } else {
-                answer.append(line)
+        for (index, line) in answerBlock.enumerated() {
+            if isCorrectAnswer(line) {
+                correctAnswer = index
+                answerBlock[index] = formatLine(line)
             }
         }
         
-        return QuestionEntry(question: question, answers: answer, correctAnswer: correctAnswer, selectedAnswer: nil)
+        return QuestionEntry(question: question, answers: answerBlock, correctAnswer: correctAnswer, selectedAnswer: nil)
     }
     
     private func isQuestion(_ possibleString: String) -> Bool {
@@ -59,8 +54,14 @@ class DocumentParser {
         return possibleString.starts(with: "*")
     }
     
-    private func isLastElement(_ element: String, array: [String]) -> Bool {
-        return element == array.last
+    private func isLastElement(_ index: Int, array: [String]) -> Bool {
+        return index == array.count - 1
+    }
+    
+    private func removeFirst(_ questionBlock: [String]) -> [String] {
+        var answerBlock = questionBlock
+        answerBlock.removeFirst()
+        return answerBlock
     }
     
     private func formatLine(_ unformattedString: String, append: String = "") -> String {
