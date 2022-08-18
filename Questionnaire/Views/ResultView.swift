@@ -19,20 +19,26 @@ struct ResultView: View {
     var body: some View {
         let report = calculator.getReport()
         
-        VStack(spacing: 20) {
-            Text(resultFormatter.getHeadline())
-            
-            VStack(spacing: 30) {
+        VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .center) {
+                Text(resultFormatter.getHeadline())
+            }
+            VStack(alignment: .leading, spacing: 30) {
                 ForEach(report.resultText, id: \.self) { result in
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text(resultFormatter.getQuestion(for: result))
                             .bold()
-                        Text(resultFormatter.getAnswer(for: result))
+                        HStack {
+                            Spacer()
+                                .frame(width: 20)
+                            Text(resultFormatter.getAnswer(for: result))
+                        }
                     }
                 }
             }
-            
-        }.navigationTitle("Your score")
+            Spacer()
+        }
+        .navigationTitle("Your score")
     }
 }
 

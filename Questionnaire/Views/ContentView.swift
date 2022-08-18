@@ -17,13 +17,20 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 30) {
                 ForEach(content, id: \.self) { entry in
-                    VStack {
-                        Text(entry.question)
+                    VStack(alignment: .leading) {
                         HStack {
+                            Spacer()
+                                .frame(width: 10)
+                            Text(entry.question)
+                        }
+                        
+                        Divider()
+                        HStack {
+                            Spacer()
+                                .frame(width: 25)
                             RadioButtonGroup(items: entry.answers) { selected in
                                 buttonTapped(selected, entry: entry)
                             }
-                            
                         }
                     }
                 }
@@ -31,8 +38,9 @@ struct ContentView: View {
                     Text("Show my score...")
                 }
                 .navigationTitle("Questionnaire")
-                
+                Spacer()
             }
+            
         }
     }
     
