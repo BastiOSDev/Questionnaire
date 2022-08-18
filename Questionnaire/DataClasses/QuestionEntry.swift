@@ -9,5 +9,5 @@ struct QuestionEntry: Equatable, Hashable {
     let question: String
     let answers: [String]
     let correctAnswer: Int
-    let selectedAnswer: Int?
+    var selectedAnswer: Int?
 }

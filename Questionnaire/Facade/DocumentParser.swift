@@ -43,7 +43,15 @@ class DocumentParser {
             }
         }
         
+        answerBlock = addDontKnowAnswer(answerBlock)
+        
         return QuestionEntry(question: question, answers: answerBlock, correctAnswer: correctAnswer, selectedAnswer: nil)
+    }
+    
+    private func addDontKnowAnswer(_ array: [String]) -> [String] {
+        var newArray = array
+        newArray.append("Don't know")
+        return newArray
     }
     
     private func isQuestion(_ possibleString: String) -> Bool {

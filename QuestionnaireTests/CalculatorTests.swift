@@ -26,9 +26,9 @@ class CalculatorTests: XCTestCase {
         let entries = [inputEntry1, inputEntry2]
         let calculatedResult = Calculator(questionEntries: entries).getReport()
         
-        let result1 = ResultText(question: "Question 1?", selectedAnswer: "wrongAnswer", isCorrect: false)
-        let result2 = ResultText(question: "Question 2?", selectedAnswer: "nextCorrectAnswer", isCorrect: true)
-        let expectedResult = Report(numberOfCorrectAnswers: 1, numberOfQuestions: 2, resultText: [result1, result2])
+        let result1 = ResultText(question: "Question 1?", selectedAnswer: "wrongAnswer", correctAnswer: "correctAnswer", isCorrect: false)
+        let result2 = ResultText(question: "Question 2?", selectedAnswer: "nextCorrectAnswer", correctAnswer: "nextCorrectAnswer", isCorrect: true)
+        let expectedResult = Report(numberOfCorrectAnswers: 1, numberOfQuestions: 2, correctPercentages: 50.0, resultText: [result1, result2])
         
         XCTAssertTrue(calculatedResult == expectedResult)
     }
@@ -36,7 +36,7 @@ class CalculatorTests: XCTestCase {
     func testCalculateResult() throws {
         let input = QuestionEntry(question: "Question 1?", answers: ["wrongAnswer", "correctAnswer"], correctAnswer: 1, selectedAnswer: 0)
         let calculatedResult = Calculator(questionEntries: [input]).calculateResult(entry: input)
-        let expectedResult = ResultText(question: "Question 1?", selectedAnswer: "wrongAnswer", isCorrect: false)
+        let expectedResult = ResultText(question: "Question 1?", selectedAnswer: "wrongAnswer", correctAnswer: "correctAnswer", isCorrect: false)
         
         XCTAssertTrue(calculatedResult == expectedResult)
     }

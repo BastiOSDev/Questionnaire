@@ -44,5 +44,15 @@ class QuestionnaireTests: XCTestCase {
         try calculatorTests.testIsWrongAnswer()
     }
     
+    func testSelection() throws {
+        let inputEntry = QuestionEntry(question: "Question 1?", answers: ["Answer 1", "Answer 2"], correctAnswer: 1, selectedAnswer: nil)
+        let testData = [inputEntry]
+        let calculatedResult = ContentView(content: testData).selectContent(answer: "Answer 2", fromEntry: inputEntry)
+        
+        let expectedResult = QuestionEntry(question: "Question 1?", answers: ["Answer 1", "Answer 2"], correctAnswer: 1, selectedAnswer: 1)
+        
+        XCTAssertTrue(calculatedResult == expectedResult, "Wrong selection")
+    }
+    
     // TO DO: UITest for testSelection (ViewController)
 }

@@ -20,12 +20,13 @@
 		D77779C128AA3E58000424CE /* DocumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C028AA3E58000424CE /* DocumentParser.swift */; };
 		D77779C328AA3F09000424CE /* Questionnaire.txt in Resources */ = {isa = PBXBuildFile; fileRef = D77779C228AA3F09000424CE /* Questionnaire.txt */; };
 		D77779C528AA3FCF000424CE /* QuestionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C428AA3FCF000424CE /* QuestionEntry.swift */; };
-		D77779C728AA40D7000424CE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C628AA40D7000424CE /* ViewModel.swift */; };
 		D77779C928AA414A000424CE /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779C828AA414A000424CE /* Report.swift */; };
 		D77779CB28AA46C1000424CE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779CA28AA46C1000424CE /* Calculator.swift */; };
 		D77779CF28AA4E66000424CE /* ReaderTestFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = D77779CE28AA4E66000424CE /* ReaderTestFile.txt */; };
-		D77779D228AA650D000424CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779D128AA650D000424CE /* ViewController.swift */; };
 		D77779D428AA6696000424CE /* ResultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77779D328AA6696000424CE /* ResultText.swift */; };
+		D7A7C16828AE64B300E0FDB4 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7C16728AE64B300E0FDB4 /* RadioButton.swift */; };
+		D7A7C16A28AE6C7600E0FDB4 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7C16928AE6C7600E0FDB4 /* ResultView.swift */; };
+		D7A7C16C28AE7CA500E0FDB4 /* ResultFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7C16B28AE7CA500E0FDB4 /* ResultFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +63,13 @@
 		D77779C028AA3E58000424CE /* DocumentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentParser.swift; sourceTree = "<group>"; };
 		D77779C228AA3F09000424CE /* Questionnaire.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Questionnaire.txt; sourceTree = "<group>"; };
 		D77779C428AA3FCF000424CE /* QuestionEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntry.swift; sourceTree = "<group>"; };
-		D77779C628AA40D7000424CE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D77779C828AA414A000424CE /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		D77779CA28AA46C1000424CE /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		D77779CE28AA4E66000424CE /* ReaderTestFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReaderTestFile.txt; sourceTree = "<group>"; };
-		D77779D128AA650D000424CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D77779D328AA6696000424CE /* ResultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultText.swift; sourceTree = "<group>"; };
+		D7A7C16728AE64B300E0FDB4 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		D7A7C16928AE6C7600E0FDB4 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D7A7C16B28AE7CA500E0FDB4 /* ResultFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,14 +122,11 @@
 			children = (
 				D77779CD28AA4CD0000424CE /* Facade */,
 				D77779CC28AA4C76000424CE /* Data */,
-				D77779C428AA3FCF000424CE /* QuestionEntry.swift */,
-				D77779C828AA414A000424CE /* Report.swift */,
-				D77779D328AA6696000424CE /* ResultText.swift */,
-				D77779C628AA40D7000424CE /* ViewModel.swift */,
-				D77779D128AA650D000424CE /* ViewController.swift */,
+				D7A7C16E28AE7CF300E0FDB4 /* DataClasses */,
 				D77779CA28AA46C1000424CE /* Calculator.swift */,
+				D7A7C16B28AE7CA500E0FDB4 /* ResultFormatter.swift */,
+				D7A7C16D28AE7CE000E0FDB4 /* Views */,
 				D777799428AA3D2D000424CE /* QuestionnaireApp.swift */,
-				D777799628AA3D2D000424CE /* ContentView.swift */,
 				D777799828AA3D30000424CE /* Assets.xcassets */,
 				D777799A28AA3D30000424CE /* Preview Content */,
 			);
@@ -185,6 +184,26 @@
 				D77779CE28AA4E66000424CE /* ReaderTestFile.txt */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		D7A7C16D28AE7CE000E0FDB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D777799628AA3D2D000424CE /* ContentView.swift */,
+				D7A7C16928AE6C7600E0FDB4 /* ResultView.swift */,
+				D7A7C16728AE64B300E0FDB4 /* RadioButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7A7C16E28AE7CF300E0FDB4 /* DataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D77779C428AA3FCF000424CE /* QuestionEntry.swift */,
+				D77779C828AA414A000424CE /* Report.swift */,
+				D77779D328AA6696000424CE /* ResultText.swift */,
+			);
+			path = DataClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,15 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A7C16828AE64B300E0FDB4 /* RadioButton.swift in Sources */,
 				D77779C528AA3FCF000424CE /* QuestionEntry.swift in Sources */,
 				D77779D428AA6696000424CE /* ResultText.swift in Sources */,
 				D77779BF28AA3E3E000424CE /* FileReader.swift in Sources */,
 				D77779C928AA414A000424CE /* Report.swift in Sources */,
-				D77779D228AA650D000424CE /* ViewController.swift in Sources */,
+				D7A7C16A28AE6C7600E0FDB4 /* ResultView.swift in Sources */,
+				D7A7C16C28AE7CA500E0FDB4 /* ResultFormatter.swift in Sources */,
 				D777799728AA3D2D000424CE /* ContentView.swift in Sources */,
 				D777799528AA3D2D000424CE /* QuestionnaireApp.swift in Sources */,
 				D77779CB28AA46C1000424CE /* Calculator.swift in Sources */,
-				D77779C728AA40D7000424CE /* ViewModel.swift in Sources */,
 				D77779C128AA3E58000424CE /* DocumentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

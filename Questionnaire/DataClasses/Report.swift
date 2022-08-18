@@ -8,5 +8,6 @@
 struct Report: Equatable {
     let numberOfCorrectAnswers: Int
     let numberOfQuestions: Int
+    let correctPercentages: Double
     let resultText: [ResultText]
 }
