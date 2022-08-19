@@ -28,7 +28,7 @@ struct ContentView: View {
                         HStack {
                             Spacer()
                                 .frame(width: 25)
-                            RadioButtonGroup(items: entry.answers) { selected in
+                            RadioButtonGroup(items: entry.answers, selectedId: answerSelection(from: entry)) { selected in
                                 buttonTapped(selected, entry: entry)
                             }
                         }
@@ -61,6 +61,14 @@ struct ContentView: View {
             }
         }
         return entryWithSelection
+    }
+    
+    private func answerSelection(from entry: QuestionEntry) -> String {
+        if let answer = entry.selectedAnswer {
+            return entry.answers[answer]
+        } else {
+            return ""
+        }
     }
 }
 
