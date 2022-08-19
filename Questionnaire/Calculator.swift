@@ -12,7 +12,6 @@ class Calculator {
         self.questionEntries = questionEntries
     }
     
-    // get QuestionEntries, write Report
     func getReport() -> Report {
         let numberOfQuestions = getNumberOfQuestions()
         let numberOfCorrectAnswers = calculateScore()
