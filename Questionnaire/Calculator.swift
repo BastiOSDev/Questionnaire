@@ -34,13 +34,7 @@ class Calculator {
         let question = entry.question
         let isCorrect = isCorrectAnswer(entry: entry)
         let correctAnswer = entry.answers[entry.correctAnswer]
-        let selectedAnswer: String
-        
-        if let answer = entry.selectedAnswer {
-            selectedAnswer = entry.answers[answer]
-        } else {
-            selectedAnswer = ""
-        }
+        let selectedAnswer = getSelectedAnswer(entry)
         
         return ResultText(question: question, selectedAnswer: selectedAnswer, correctAnswer: correctAnswer, isCorrect: isCorrect)
     }
@@ -61,10 +55,14 @@ class Calculator {
     }
     
     func isCorrectAnswer(entry: QuestionEntry) -> Bool {
-        if entry.correctAnswer == entry.selectedAnswer {
-            return true
+        return entry.correctAnswer == entry.selectedAnswer
+    }
+    
+    private func getSelectedAnswer(_ entry: QuestionEntry) -> String {
+        if let answer = entry.selectedAnswer {
+            return entry.answers[answer]
         } else {
-            return false
+            return ""
         }
     }
 }
