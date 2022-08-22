@@ -9,7 +9,12 @@ struct ResultFormatter {
     let report: Report
     
     func getHeadline() -> String {
-        return "\(report.numberOfCorrectAnswers) out of \(report.numberOfQuestions) questions answered correctly (\(report.correctPercentages)%)"
+        let percentagesAsInt = cutDecimalDigits(report.correctPercentages)
+        return "\(report.numberOfCorrectAnswers) out of \(report.numberOfQuestions) questions answered correctly (\(percentagesAsInt)%)"
+    }
+    
+    private func cutDecimalDigits(_ input: Double) -> Int {
+        return Int(input)
     }
     
     func getQuestion(for result: ResultText) -> String {
