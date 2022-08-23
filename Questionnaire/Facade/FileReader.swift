@@ -24,10 +24,10 @@ class FileReader {
     }
     
     private func getContent(_ file: URL) throws -> [String] {
-        let content = try String(contentsOf: file)
-        let parsedtxt: [String] = content.components(
-            separatedBy: "\n"
-        ).map{ $0.components(separatedBy: "")[0] }
+        let content = try String(contentsOf: file).trimmingCharacters(in: .whitespacesAndNewlines)
+        let parsedtxt: [String] = content.components(separatedBy: "\n")
         return parsedtxt
     }
+    
+    
 }

@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
+            ScrollView {
                 ForEach(content, id: \.self) { entry in
                     VStack(alignment: .leading) {
                         HStack {

@@ -12,8 +12,7 @@ class Calculator {
         self.questionEntries = questionEntries
     }
     
-    func getReport() -> Report {
-        let numberOfQuestions = getNumberOfQuestions()
+    var report: Report {
         let numberOfCorrectAnswers = calculateScore()
         let correctPercentages = calculatePercentages(correctAnswers: Double(numberOfCorrectAnswers), maxAnswers: Double(numberOfQuestions))
         var reports = [ResultText]()
@@ -36,10 +35,10 @@ class Calculator {
         let correctAnswer = entry.answers[entry.correctAnswer]
         let selectedAnswer = getSelectedAnswer(entry)
         
-        return ResultText(question: question, selectedAnswer: selectedAnswer, correctAnswer: correctAnswer, isCorrect: isCorrect)
+        return ResultText(question: question!, selectedAnswer: selectedAnswer, correctAnswer: correctAnswer, isCorrect: isCorrect)
     }
     
-    private func getNumberOfQuestions() -> Int {
+    var numberOfQuestions: Int {
         return questionEntries.count
     }
     

@@ -13,11 +13,11 @@ struct ResultView: View {
     
     init(calculator: Calculator) {
         self.calculator = calculator
-        self.resultFormatter = ResultFormatter(report: calculator.getReport())
+        self.resultFormatter = ResultFormatter(report: calculator.report)
     }
     
     var body: some View {
-        let report = calculator.getReport()
+        let report = calculator.report
         
         VStack(alignment: .leading, spacing: 20) {
             VStack(alignment: .center) {
@@ -41,9 +41,3 @@ struct ResultView: View {
         .navigationTitle("Your score")
     }
 }
-
-//struct ResultView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultView()
-//    }
-//}

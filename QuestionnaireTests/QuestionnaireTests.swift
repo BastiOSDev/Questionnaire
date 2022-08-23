@@ -27,29 +27,16 @@ class QuestionnaireTests: XCTestCase {
         XCTAssertTrue(calculatedResult == expectedResult, "Wrong file parsing")
     }
     
-    func testParser() throws {
-        let parserTests = ParserTests()
-        
-        try parserTests.testParserQuestionEntry()
-        try parserTests.testParserGetQuestionEntries()
-    }
-    
-    func testCalculator() throws {
-        let calculatorTests = CalculatorTests()
-        
-        try calculatorTests.testCalculateScore()
-        try calculatorTests.testReport()
-        try calculatorTests.testCalculateResult()
-        try calculatorTests.testIsCorrectAnswer()
-        try calculatorTests.testIsWrongAnswer()
-    }
-    
     func testSelection() throws {
-        let inputEntry = QuestionEntry(question: "Question 1?", answers: ["Answer 1", "Answer 2"], correctAnswer: 1, selectedAnswer: nil)
+        let input = ["Question 1?", "Answer 1", "*Answer 2"]
+        
+        let inputEntry = QuestionEntry(array: input)
         let testData = [inputEntry]
         let calculatedResult = ContentView(content: testData).selectContent(answer: "Answer 2", fromEntry: inputEntry)
         
-        let expectedResult = QuestionEntry(question: "Question 1?", answers: ["Answer 1", "Answer 2"], correctAnswer: 1, selectedAnswer: 1)
+        var expectedResult = QuestionEntry(array: ["Question 1?", "Answer 1", "*Answer 2"])
+        expectedResult.correctAnswer = 1
+        expectedResult.selectedAnswer = 1
         
         XCTAssertTrue(calculatedResult == expectedResult, "Wrong selection")
     }

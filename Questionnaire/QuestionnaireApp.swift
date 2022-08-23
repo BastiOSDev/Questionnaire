@@ -13,9 +13,9 @@ struct QuestionnaireApp: App {
         WindowGroup {
             let fileReader = FileReader()
             let url = Bundle.main.url(forResource: "Questionnaire", withExtension: "txt")!
-            let file = DocumentParser().getQuestionEntries(fileReader.readQuestionFile(file: url))
+            let entrys = DocumentParser.getQuestionEntries(fileReader.readQuestionFile(file: url))
             
-            ContentView(content: file)
+            ContentView(content: entrys)
         }
     }
 }
