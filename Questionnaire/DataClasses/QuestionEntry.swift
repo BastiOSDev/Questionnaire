@@ -16,13 +16,13 @@ struct QuestionEntry: Equatable, Hashable {
     }
     var answers: [String] = [String]()
     var correctAnswer: Int!
-    var selectedAnswer: Int? = nil
+    var selectedAnswer: Int?
     
     init(array: [String]) {
-        if array.count < 2 {
+        if lessThanOneElement(array) {
             fatalError()
         }
-        for (_, value) in array.enumerated() {
+        for value in array {
             if value == array.first {
                 _question = value
                 continue
@@ -33,7 +33,7 @@ struct QuestionEntry: Equatable, Hashable {
     }
     
     private mutating func appendAnswer(_ value: String) {
-        if value.starts(with: "*") {
+        if isCorrectAnswer(value) {
             let range: Range = value.index(after: value.startIndex)..<value.endIndex
             let answer: String! = String(value[range])
             answers.append(answer)
@@ -41,5 +41,13 @@ struct QuestionEntry: Equatable, Hashable {
             return
         }
         answers.append(value)
+    }
+    
+    private func lessThanOneElement(_ array: [String]) -> Bool {
+        return array.count < 2
+    }
+    
+    private func isCorrectAnswer(_ value: String) -> Bool {
+        return value.starts(with: "*")
     }
 }

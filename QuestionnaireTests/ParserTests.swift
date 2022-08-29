@@ -14,8 +14,8 @@ class ParserTests: XCTestCase {
         let calculatedResult = DocumentParser.getQuestionEntries(inputData)
         
         let result1 = QuestionEntry(array: ["?First question", "wrongAnswer", "*correctAnswer"])
-        
         let result2 = QuestionEntry(array: ["?Second question", "*correctAnswer", "wrongAnswer"])
+        
         let expectedResult = [result1, result2]
         
         XCTAssertTrue(calculatedResult == expectedResult, "Wrong question parsing")

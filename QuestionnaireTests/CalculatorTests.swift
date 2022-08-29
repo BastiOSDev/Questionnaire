@@ -20,7 +20,6 @@ class CalculatorTests: XCTestCase {
     func testReport() throws {
         var inputEntry1 = QuestionEntry(array: ["Question 1?", "wrongAnswer", "*correctAnswer"])
         inputEntry1.selectedAnswer = 0
-        //, correctAnswer: 1, selectedAnswer: 0)
         var inputEntry2 = QuestionEntry(array: ["Question 2?", "nextWrongAnswer", "*nextCorrectAnswer"])
         inputEntry2.selectedAnswer = 1
     
